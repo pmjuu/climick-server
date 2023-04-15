@@ -1,0 +1,19 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true,
+    "browser": true
+  },
+  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": false,
+        "parser": "flow"
+      }
+    ],
+    "no-unused-vars": "off",
+    "func-names": "off"
+  }
+}
