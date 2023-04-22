@@ -4,10 +4,18 @@ const playerSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
+    unique: true,
   },
   time: {
     type: Number,
     required: true,
+    min: 0,
+  },
+  hp: {
+    type: Number,
+    required: true,
+    min: 0,
+    max: 100,
   },
 });
 
