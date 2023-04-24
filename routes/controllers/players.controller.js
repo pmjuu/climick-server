@@ -3,7 +3,7 @@ const Player = require("../../models/Player");
 exports.getPlayer = async function (req, res, next) {
   try {
     const players = await Player.find().lean();
-    res.json({ status: 200, message: "success", players });
+    res.json({ message: "success", players });
   } catch (err) {
     next(err);
   }
@@ -14,7 +14,7 @@ exports.addPlayer = async function (req, res, next) {
 
   try {
     await new Player(playerInfo).save();
-    res.json({ result: "ok" });
+    res.json({ message: "success" });
   } catch (err) {
     next(err);
   }
